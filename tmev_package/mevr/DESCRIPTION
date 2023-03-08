@@ -1,0 +1,14 @@
+Package: mevr
+Version: 0.1-0
+Date: 2022-09-30
+Title: Functions for Fitting the Metastatistical Extreme Value Distribution MEVD
+Authors@R: c(person("Harald", "Schellander", role = c("aut", "cre", "ctb"), email = "harald.schellander@zamg.ac.at"),
+			 person("Alexander", "Lieb", role = c("ctb")),
+			 person("Marc-Andre", "Falkensteiner", role = c("ctb")))
+Maintainer: Harald Schellander <harald.schellander@zamg.ac.at>
+Depends: R (>= 4.1), dplyr, rlang, bamlss, doParallel
+Encoding: UTF-8
+Imports: stats, graphics, EnvStats, mgcv, foreach
+Description: Functions for fitting the metastatistical extreme value distribution MEVD (Marani and Ignaccolo, 2015, <doi:10.1016/j.advwatres.2015.03.001>) and its variants SMEV (Marra et al., 2019, <doi:10.1016/j.advwatres.2019.04.002>) and TMEV are provided. 
+License: GPL-2 | GPL-3
+RoxygenNote: 7.2.3
