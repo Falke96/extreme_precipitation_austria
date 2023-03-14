@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Falkensteiner"
+  given-names: "Marc-Andre"
+  orcid: "https://orcid.org/0000-0002-6887-405X"
+- family-names: "Schellander"
+  given-names: "Harald"
+  orcid: "https://orcid.org/0000-0001-7661-287X"
+- family-names: "Ehrensperger"
+  given-names: "Gregor"
+  orcid: "https://orcid.org/0000-0003-4816-0233"
+- family-names: "Hell"
+  given-names: "Tobias"
+  orcid: "https://orcid.org/0000-0002-2841-3670"
+title: "extreme_precipitation_austria"
+version: 1.0.0
+doi: 10.5281/zenodo.7708355
+date-released: 2023-03-09
+url: "https://github.com/Falke96/extreme_precipitation_austria"
