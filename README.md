@@ -1,5 +1,11 @@
 # Extreme Precipitation
 
+## Citing this software
+[Citation information](https://github.com/Falke96/extreme_precipitation_austria/blob/main/CITATION.cff)
+
+[![DOI](https://zenodo.org/badge/611209754.svg)](https://zenodo.org/badge/latestdoi/611209754)
+
+
 ## Setup
 ### General
 Some R-packages (`terra`, `sf`) have a couple dependencies. Install:
