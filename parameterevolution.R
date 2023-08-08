@@ -1,9 +1,11 @@
 library("this.path")
+library("dplyr")
 library("bamlss")
 library("lubridate")
 library("reshape")
 library("ggplot2")
 library("cowplot")
+library("pbapply")
 
 path <- this.dir()
 load(file.path(path, "data", "rain_aut.Rda"))
@@ -58,17 +60,18 @@ params_data <- data.frame(year = dat$year,
                           count = (apply(dat, 1, function(x) sum(!is.na(x)))- 1) / 4
 ) %>%
   dplyr::filter(year >= 1900,
-                year < 2017)
+                year < 2017, 
+                count >= 20)
 
 #Create Plot
 colors <- c("Mean" = "green", "Standard deviation" = "blue")
 coeff <- 64
 
-window_stations <- ggplot(params_data, aes(x = year)) +
+window_stations_paras <- ggplot(params_data, aes(x = year)) +
   geom_segment(
     mapping = aes(x = year, y =  (count + 320) / coeff, xend = year, yend = -1), 
     linewidth = 1, lineend = "butt", colour = gray(0.8)) +
-  geom_line(aes(y = mu, color = "Mean")) +
+  geom_line(aes(y = mu, color = "Expectation")) +
   geom_line(aes(y = sigma, color = "Standard deviation")) +
   theme_bw() +
   theme(legend.position = "bottom",
@@ -104,7 +107,7 @@ stations_insert = plot_stations_insert(stations_data = stations_data)
 fig_size <- .25
 map_with_inset <-
   ggdraw() +
-  draw_plot(window_stations) +
+  draw_plot(window_stations_paras) +
   draw_plot(stations_insert, x=0.1, y=0.96, width=fig_size, height=fig_size, vjust=1)
 
 map_with_inset

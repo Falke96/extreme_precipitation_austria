@@ -1,11 +1,5 @@
 # Extreme Precipitation
 
-## Citing this software
-[Citation information](https://github.com/Falke96/extreme_precipitation_austria/blob/main/CITATION.cff)
-
-[![DOI](https://zenodo.org/badge/611209754.svg)](https://zenodo.org/badge/latestdoi/611209754)
-
-
 ## Setup
 ### General
 Some R-packages (`terra`, `sf`) have a couple dependencies. Install:
@@ -15,8 +9,24 @@ sudo apt-get update
 sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev libsqlite0-dev
 ```
 
-### renv
-We use R `v4.1.2` for this project. Use renv to install all required R modules from `renv.lock`: 
+### R
+#### rig
+We use [rig](https://github.com/r-lib/rig) to manage the R version.
+
+To install `rig` on Ubuntu:
+```bash
+curl -Ls https://github.com/r-lib/rig/releases/download/latest/rig-linux-latest.tar.gz |
+  sudo tar xz -C /usr/local
+```
+
+We are working with `4.3.0`, so we add this version and set it as the default:
+```bash
+rig add 4.3.0
+rig default 4.3.0
+```
+
+#### renv
+Use renv to install all required R modules from `renv.lock`: 
 ```r
 renv::restore()
 ```
