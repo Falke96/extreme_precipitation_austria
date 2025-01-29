@@ -2,11 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/611209754.svg)](https://zenodo.org/badge/latestdoi/611209754)
 
-This is the source code that accompanies the paper
-
-M.-A. Falkensteiner, H. Schellander, G. Ehrensperger, and T. Hell (2023). Accounting for seasonality in the metastatistical extreme value distribution. Weather and Climate Extremes, vol. 42, p. 100601, Dec. 2023
-
-https://doi.org/10.1016/j.wace.2023.100601 
+This is the source code that accompanies the paper [[1]](#1).
 
 ## Setup
 ### General
@@ -81,3 +77,8 @@ The order of the following list defines the order in which the scripts should be
 
 * `ccc.R`: Defining some global constants.
 * `plotting_insert.R`: Plotting an insert with a stations location.
+
+
+## References
+<a id="1">[1]</a>
+[1] M.-A. Falkensteiner, H. Schellander, G. Ehrensperger, and T. Hell (2023). Accounting for seasonality in the metastatistical extreme value distribution. Weather and Climate Extremes, vol. 42, p. 100601, Dec. 2023 (https://doi.org/10.1016/j.wace.2023.100601)
